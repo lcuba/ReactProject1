@@ -2,41 +2,97 @@
 <html>
   <head>
     <title>Portfolio | Lucas Cuba</title>
+    <!--Setting the viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Material Design Lite Links-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-amber.min.css" />
+    <!--custom main.css link-->
+    <link rel="stylesheet" href="styles/main.css" />
+    <!--Font awesome icon library-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!--material design js-->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </head>
   <body>
-    <header>
+    <!--using material design header-->
+    <header class="mdl-layout__header mdl-layout__header--transparent">
       <h1>Lucas Cuba</h1>
       <p class="slogan">Aspiring front-end developer</p>
     </header>
-    <main>
-      <div class="project featured-project">
-        <img src="http://lorempixel.com/350/260/abstract/placeholder-1" alt="project screenshot" />
-        <h2>Featured Project Name</h2>
-        <p>Project description text</p>
-      </div>
-      <div class="project">
-        <img src="http://lorempixel.com/350/260/abstract/placeholder-2" alt="project screenshot" />
-        <h2>Project Name</h2>
-        <p>Project description text</p>
-      </div>
-      <div class="project">
-        <img src="http://lorempixel.com/350/260/abstract/placeholder-3" alt="project screenshot"/>
-        <h2>Project Name</h2>
-        <p>Project description text</p>
-      </div>
-      <div class="project">
-        <img src="http://lorempixel.com/350/260/abstract/placeholder-4" alt="project screenshot"/>
-        <h2>Project Name</h2>
-        <p>Project description text</p>
-      </div>
+    <!--using material design grid for projects section-->
+    <main class="mdl-layout__content mdl-grid">
+        <!--using mdl grid with 12 cells for the maximum screen real estate for featured project-->
+        <div class="project featured-project mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+          <div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet">
+             <img src="http://lorempixel.com/350/260/abstract/placeholder-1" alt="project screenshot"/>
+           </div>
+           <div class="mdl-cell mdl-cell--7-col">
+             <h2 class="mdl-card__title-text">Featured Project Name</h2>
+             <p class="project-description mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           </div>
+         </div>
+            <!--using smaller material design cells for other projects-->
+            <!--nonfeatured project 1-->
+            <div class="project mdl-cell mdl-card mdl-shadow--4dp">
+              <div>
+                <img src="http://lorempixel.com/350/260/abstract/placeholder-2" alt="project screenshot"/>
+              </div>
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Project Name</h2>
+              </div>
+              <div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+            <!--nonfeatured project 2-->
+            <div class="project mdl-cell mdl-card mdl-shadow--4dp">
+              <div>
+                <img src="http://lorempixel.com/350/260/abstract/placeholder-3" alt="project screenshot"/>
+              </div>
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Project Name</h2>
+              </div>
+              <div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              </div>
+              <!--nonfeatured project 3-->
+              <div class="project mdl-cell mdl-card mdl-shadow--4dp">
+                <div>
+                  <img src="http://lorempixel.com/350/260/abstract/placeholder-4" alt="project screenshot"/>
+                </div>
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text">Project Name</h2>
+                </div>
+                <div class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              </div>
+
+
     </main>
-    <footer>
-      <ul>
-        <li><a href="www.linkedin.com/in/lucas-cuba-b5b493141">LinkedIn</a></li>
-        <li><a href="https://github.com/lcuba">GitHub</a></li>
-        <li><a href="https://www.facebook.com/lucas.cuba.31">Facebook</a></li>
-        <li><a href="mailto:lucas.cuba4@gmail.com">Email</a></li>
+    <!--using the non-invasive material design mini footer-->
+    <footer class="mdl-mini-footer">
+      <!--making a list of links for social media with font awesome icons-->
+      <ul class="mdl-mini-footer__link-list">
+        <li>
+          <a href="www.linkedin.com/in/lucas-cuba-b5b493141" target="_blank">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/lcuba" target="_blank">
+            <i class="fa fa-github-square" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/lucas.cuba.31" target="_blank">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:lucas.cuba4@gmail.com">
+            <i class="fa fa-envelope-square" aria-hidden="true"></i>
+          </a>
+        </li>
       </ul>
+
     </footer>
+
   </body>
 </html>
