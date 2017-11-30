@@ -11,18 +11,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
     <script type="text/babel">
+
       class CurrentTime extends React.Component {
+        constructor() {
+          super();
+          this.state = {hello: 'Welcome'};
+        }
         render() {
+          setTimeout(() => {
+            this.setState({hello: 'Welcome User'});
+          }, 500)
           return (
             <div>
-              <h1>{new Date().toLocaleTimeString()}</h1>
+              <h1>{this.state.hello}</h1>
+              <h3>The time is: {this.props.time.toLocaleTimeString()}</h3>
             </div>
           );
         }
       }
 
+      let time = new Date();
+      let newTime = new Date();
+
       ReactDOM.render(
-        <CurrentTime />, document.getElementById('time')
+        <CurrentTime time={time} />, document.getElementById('time')
       );
     </script>
   </body>
