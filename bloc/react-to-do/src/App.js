@@ -15,6 +15,10 @@ class App extends Component {
     };
   }
 
+  deleteTodo(index) {
+    this.setState({ todos: this.state.todos.filter((todo) => this.state.todos.indexOf(todo) !== index) });
+  }
+
   handleChange(e) {
     this.setState({newTodoDescription: e.target.value})
   }
@@ -43,6 +47,7 @@ class App extends Component {
               description={todo.description}
               isCompleted={todo.isCompleted}
               toggleComplete={() => this.toggleComplete(index)}
+              deleteTodo={() => this.deleteTodo(index)}
             />
           )}
         </ul>
